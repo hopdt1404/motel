@@ -23,7 +23,7 @@
 			<div class="col-12">
 				<div class="panel panel-flat">
 					<div class="panel-body">
-						Chào mừng bạn đến với Trang quản trị Phòng trọ đà nẵng
+						Chào mừng bạn đến với Trang quản trị phongtro.com
 					</div>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 		<!-- /quick stats boxes -->
 		<!-- Footer -->
 		<div class="footer text-muted">
-			&copy; 2019. <a href="#">Project Phòng trọ Đà nẵng</a> by <a href="" target="_blank">Thành Trung</a>
+			&copy; 2020. <a href="#">Project phongtro.com</a>
 		</div>
 		<!-- /footer -->
 	</div>
