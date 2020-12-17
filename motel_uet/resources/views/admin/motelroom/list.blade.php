@@ -1,5 +1,36 @@
 @extends('admin.layout.master')
 @section('content2')
+
+    <?php
+    function time_elapsed_string($datetime, $full = false) {
+        $now = new DateTime;
+        $ago = new DateTime($datetime);
+        $diff = $now->diff($ago);
+
+        $diff->w = floor($diff->d / 7);
+        $diff->d -= $diff->w * 7;
+
+        $string = array(
+            'y' => 'năm',
+            'm' => 'tháng',
+            'w' => 'tuần',
+            'd' => 'ngày',
+            'h' => 'giờ',
+            'i' => 'phút',
+            's' => 'giây',
+        );
+        foreach ($string as $k => &$v) {
+            if ($diff->$k) {
+                $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? '' : '');
+            } else {
+                unset($string[$k]);
+            }
+        }
+
+        if (!$full) $string = array_slice($string, 0, 1);
+        return $string ? implode(', ', $string) . ' trước' : 'Vừa xong';
+    }
+    ?>
 <!-- Main content -->
 <div class="content-wrapper">
 	<!-- Page header -->
@@ -44,6 +75,7 @@
 									<th>Danh mục</th>
 									<th>Giá phòng</th>
 									<th>Trạng thái</th>
+									<th class="text-center">Thời gian</th>
 									<th class="text-center">Actions</th>
 								</tr>
 							</thead>
@@ -62,6 +94,9 @@
 										@elseif($room->tinhtrang == 0)
 											<span class="label label-danger">Chờ Phê Duyệt</span>
 										@endif
+									</td>
+									<td class="text-center">
+										{{ time_elapsed_string($room->created_at) }} <span class="badge badge-primary">{{ $room->created_at }}</span>
 									</td>
 									<td class="text-center">
 										<ul class="icons-list">
