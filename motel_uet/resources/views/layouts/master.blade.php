@@ -81,8 +81,7 @@
 							<img src="images/logo.png">                        
 						</a>
 						<div style="padding-top: 10px;">
-							<p>Dự án phát triển Website Đăng tin và Tìm kiếm Phòng trọ Đà Nẵng.</p>
-							<p>Sinh viên thực hiện: Lê Thành Trung - Lớp 15SI-CLC.</p>
+							<p>Dự án phát triển Website Đăng tin và Tìm kiếm Phòng trọ </p>
 						</div>
 					</div>
 				</div>
