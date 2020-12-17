@@ -33,7 +33,7 @@ function searchMotelajax(){
 				max_price: max,
 				id_ditrict: id_ditrict,
 				id_category: id_category
-			}
+			};
 			console.log(min,max);
 			// console.log(data);
 			$.ajax({
