@@ -159,8 +159,8 @@
   var marker;
   function initialize() {
     var mapOptions = {
-      center: {lat: 16.070372, lng: 108.214388},
-      zoom: 12
+      center: {lat: 21.0410848, lng: 105.7974559},
+      zoom: 15
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
